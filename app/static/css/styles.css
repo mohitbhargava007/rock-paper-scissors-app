@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.choice-img {
+    width: 300px;  /* Updated size */
+    height: 300px; /* Updated size */
+    margin: 10px;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 24px;
+}
