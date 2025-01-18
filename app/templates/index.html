@@ -20,6 +20,8 @@
         </button>
     </div>
     <div id="result"></div>
+    <button onclick="playGame()">Play Game</button>
+
     <script>
         function play(choice) {
             fetch('/play', {
@@ -34,6 +36,20 @@
                 document.getElementById('result').innerHTML = 
                     `You chose ${data.user_choice}, computer chose ${data.computer_choice}. You ${data.result}!`;
             });
+        }
+
+        function playGame() {
+            const userScore = Math.floor(Math.random() * 11);
+            const computerScore = Math.floor(Math.random() * 11);
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `User score: ${userScore} <br> Computer score: ${computerScore} <br>`;
+
+            if (userScore > computerScore) {
+                resultDiv.innerHTML += "User wins! 😊";  // Happy emoji
+            } else {
+                resultDiv.innerHTML += "Computer wins! 😢";  // Sad emoji
+            }
         }
     </script>
 </body>
